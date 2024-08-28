@@ -58,6 +58,8 @@ public class TarefaController {
             Tarefa tarefaNovo = tarefa.get();
             tarefaNovo.setTitulo(tarefaAtualizada.getTitulo());
             tarefaNovo.setDescricao(tarefaAtualizada.getDescricao());
+            tarefaNovo.setHorario(tarefaAtualizada.getHorario());
+            tarefaNovo.setData(tarefaAtualizada.getData());
 
             Tarefa t = repository.save(tarefaNovo);
             return new ResponseEntity<>(t, HttpStatus.OK);
